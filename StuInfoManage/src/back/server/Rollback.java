@@ -50,7 +50,7 @@ public class Rollback implements Runnable {
                 }
             }
             case "gui" -> {
-                new GUI("·þÎñÆ÷¶Ë 20217033 Áº³¯Ñô", commands, studentList);
+                new GUI("·þÎñÆ÷¶Ë", commands, studentList);
                 System.out.println("GUI has been created");
             }
             default -> System.out.println("incorrect command");

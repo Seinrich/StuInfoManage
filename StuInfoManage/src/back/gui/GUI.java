@@ -51,29 +51,27 @@ public class GUI extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(rollbackButton)) {
-            ImageIcon icon = new ImageIcon("src/resource/image/NEU.png");
             if (!commands.empty()) {
                 Utils.getInstance().opCom(commands, studentList);
                 JOptionPane.showMessageDialog(null,
-                        "撤销成功", "撤销", JOptionPane.ERROR_MESSAGE, icon);
+                        "撤销成功", "撤销", JOptionPane.ERROR_MESSAGE);
                 System.out.println("rollback success\n");
             } else {
                 JOptionPane.showMessageDialog(null,
-                        "已无操作可撤销", "撤销", JOptionPane.ERROR_MESSAGE, icon);
+                        "已无操作可撤销", "撤销", JOptionPane.ERROR_MESSAGE);
                 System.out.println("rollback fail\n");
             }
         } else if (e.getSource().equals(rollbackallButton)) {
-            ImageIcon icon = new ImageIcon("src/resource/image/NEU.png");
             if (!commands.empty()) {
                 while (!commands.empty()) {
                     Utils.getInstance().opCom(commands, studentList);
                 }
                 JOptionPane.showMessageDialog(null,
-                        "重置成功", "重置", JOptionPane.ERROR_MESSAGE, icon);
+                        "重置成功", "重置", JOptionPane.ERROR_MESSAGE);
                 System.out.println("rollbackall success\n");
             } else {
                 JOptionPane.showMessageDialog(null,
-                        "已无操作可撤销", "撤销", JOptionPane.ERROR_MESSAGE, icon);
+                        "已无操作可撤销", "撤销", JOptionPane.ERROR_MESSAGE);
                 System.out.println("rollbackall fail\n");
             }
         }

@@ -65,8 +65,7 @@ public class Utils {
 
         String content;
         StringBuilder builder = new StringBuilder();
-
-        File file = new File("src/resource/json/StuInfo.json");
+        File file = new File("StuInfoManage/src/resource/json/StuInfo.json");
         InputStreamReader streamReader = new InputStreamReader(new FileInputStream(file), "GBK");
         BufferedReader bufferedReader = new BufferedReader(streamReader);
 
@@ -102,7 +101,7 @@ public class Utils {
         Gson gson = new Gson();
         String filename;
         try {
-            filename = new String("src/resource/json/StuInfo.json".getBytes("GBK"));
+            filename = new String("StuInfoManage/src/resource/json/StuInfo.json".getBytes("GBK"));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
@@ -125,7 +124,7 @@ public class Utils {
         String content;
         StringBuilder builder = new StringBuilder();
 
-        File file = new File("src/resource/json/ComInfo.json");
+        File file = new File("StuInfoManage/src/resource/json/ComInfo.json");
         InputStreamReader streamReader = new InputStreamReader(new FileInputStream(file), "GBK");
         BufferedReader bufferedReader = new BufferedReader(streamReader);
 
@@ -153,7 +152,7 @@ public class Utils {
         Gson gson = new Gson();
         String filename;
         try {
-            filename = new String("src/resource/json/ComInfo.json".getBytes("GBK"));
+            filename = new String("StuInfoManage/src/resource/json/ComInfo.json".getBytes("GBK"));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
@@ -301,8 +300,6 @@ public class Utils {
 
     //初始化界面
     public void initFrame(JFrame frame) {
-        //设置图标
-        frame.setIconImage(new ImageIcon("src/resource/image/NEU.png").getImage());
         //设置关闭时退出程序
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //设置窗体的大小
@@ -312,7 +309,7 @@ public class Utils {
         //设置不可缩放
         frame.setResizable(false);
         //设置背景图片
-        ImageIcon image = new ImageIcon("src/resource/image/gui.jpg");
+        ImageIcon image = new ImageIcon("StuInfoManage/src/resource/image/gui.jpg");
         JLabel background = new JLabel(image);
         frame.add(background);
         background.setBounds(0, 0, 320, 180);
